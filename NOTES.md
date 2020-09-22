@@ -71,6 +71,15 @@ make a footer design with `<Footer>` tag
 - then in the layout.js file import footer & write your Layout method
 
 
+### Getting started with Navbar in React 
+
+**Link** - Link from gatsby is similar anchor tag in html but it provide us smooth pager changes rather than flashed occur as in anchor tag.
+
+
+Syntax - <Link to="/location">blog<Link>
+
+[more](https://www.gatsbyjs.com/docs/gatsby-link/)
+
 
 
 
