@@ -63,7 +63,13 @@ Types:
  - [ ] Delete the header.js,image folder,page-2.js
  - [ ] Download the files from LearnCodeOnline.
   
- 
+### Creating your very first component in React 
+- use `rfc` to use functional template 
+in the component make a folder name Reusable then make a Footer.js file 
+make a footer design with `<Footer>` tag
+
+- then in the layout.js file import footer & write your Layout method
+
 
 
 
