@@ -9,7 +9,29 @@ export default class Navbar extends Component {
     //Creating the state for navbar so that it can toggle properly
     state = {
         navBarState: false,
-        navBarClassName: "collapse navbar-collapse"
+        navBarClassName: "collapse navbar-collapse",
+        menus: [
+            {
+                id: 1,
+                item: 'Home',
+                url: '/'
+            },
+            {
+                id: 2,
+                item: 'About',
+                url: '/about'
+            },
+            {
+                id: 3,
+                item: 'Services',
+                url: '/services'
+            },
+            {
+                id: 4,
+                item: 'Contact',
+                url: '/contact'
+            }
+        ]
     }
     //Toggler Method 
     myToggler = () => {
@@ -35,16 +57,18 @@ export default class Navbar extends Component {
                 </button>
                 <div className={this.state.navBarClassName}>
                     <ul className='navbar-nav ml-auto mr-5'>
-                        <li className="nav-item">
-                            <Link to='/' className='nav-link text-white'>
-                                Home
+                        {this.state.menus.map(menu => {
+
+                            return (
+                                <li key ={menu.id} className="nav-item">
+                                    <Link to={menu.url} className='nav-link text-white'>
+                                        {menu.item}
                             </Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link to='/' className='nav-link text-white'>
-                                About
-                            </Link>
-                        </li>
+                                </li>
+                            )
+                        })}
+
+                      
                         <li className="nav-item">
                             <Link to='/' className='nav-link text-white'>
                                 <FaCartArrowDown className='cart-icon' />

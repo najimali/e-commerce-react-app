@@ -18,12 +18,13 @@ const Layout =({children})=>(
   <>
     <Navbar/>
     {children}
-    <Footer></Footer>
+    <Footer supername="batman"></Footer>
+    <Footer supername="Thor"></Footer>
   </>
 )
 
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
+// Layout.propTypes = {
+//   children: PropTypes.node.isRequired,
+// }
 
 export default Layout
