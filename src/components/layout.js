@@ -14,12 +14,11 @@ import Footer from './Reusable/Footer'
 import './bootstrap.min.css'
 import "./layout.css"
 // children is like props 
-const Layout =({children})=>(
+const Layout = ({ children }) => (
   <>
-    <Navbar/>
+    <Navbar />
     {children}
-    <Footer supername="batman"></Footer>
-    <Footer supername="Thor"></Footer>
+    <Footer ></Footer>
   </>
 )
 

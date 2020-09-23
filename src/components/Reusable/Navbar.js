@@ -60,15 +60,15 @@ export default class Navbar extends Component {
                         {this.state.menus.map(menu => {
 
                             return (
-                                <li key ={menu.id} className="nav-item">
+                                <li key={menu.id} className="nav-item">
                                     <Link to={menu.url} className='nav-link text-white'>
                                         {menu.item}
-                            </Link>
+                                    </Link>
                                 </li>
                             )
                         })}
 
-                      
+
                         <li className="nav-item">
                             <Link to='/' className='nav-link text-white'>
                                 <FaCartArrowDown className='cart-icon' />

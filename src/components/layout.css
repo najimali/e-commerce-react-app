@@ -1,8 +1,18 @@
+/* located in Navbar.js */
 .bg-theme{
 
   background-color: #0E6BA8;
 }
+
 .cart-icon{
 
   font-size: 2rem;
+}
+/* Loacted in Index.js   */
+.hero-background{
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
