@@ -1,18 +1,23 @@
 /* located in Navbar.js */
-.bg-theme{
 
+.bg-theme {
   background-color: #0E6BA8;
 }
 
-.cart-icon{
-
+.cart-icon {
   font-size: 2rem;
 }
+
 /* Loacted in Index.js   */
-.hero-background{
+
+.hero-background {
   min-height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.btn-warning {
+  padding: .75rem 1.25rem;
 }
