@@ -1,5 +1,10 @@
 /* located in Navbar.js */
+*{
 
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .bg-theme {
   background-color: #0E6BA8;
 }
@@ -11,6 +16,14 @@
 /* Loacted in Index.js   */
 
 .hero-background {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-background {
   min-height: 50vh;
   display: flex;
   flex-direction: column;

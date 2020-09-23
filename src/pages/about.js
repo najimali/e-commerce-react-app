@@ -8,22 +8,23 @@ import SEO from "../components/seo"
 import HeroSection from '../components/Reusable/HeroSection'
 import InfoBlock from '../components/Reusable/Infoblock'
 import DualInfoBlock from '../components/Reusable/DualInfoblock'
+import Teamphotosection from '../components/About/Teamphotosection'
 
 
 //data is return from graphql queries
-const IndexPage = ({ data }) => (
+const AboutPage = ({ data }) => (
   <Layout>
     <SEO title="Home"></SEO>
 
     <HeroSection
       img={data.img.childImageSharp.fluid}
-      title='I write code'
-      subtitle='LearnCodeOnline.in'
-      heroClass='hero-background'>
-
+      title='About LearnCode Online'
+      subtitle=''
+      heroClass='about-background'>
     </HeroSection>
-    <InfoBlock heading='About us'/>
-    <DualInfoBlock heading='Our Team' image='https://images.pexels.com/photos/3561340/pexels-photo-3561340.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'/>
+    <DualInfoBlock heading='A message from CEO' image='https://images.pexels.com/photos/3577561/pexels-photo-3577561.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'/>
+    <InfoBlock heading='Our Vision'/>
+    <Teamphotosection></Teamphotosection>
 
   </Layout>
 )
@@ -32,7 +33,7 @@ const IndexPage = ({ data }) => (
 //note img is reference is store in img
 export const query = graphql`
 { 
-    img: file(relativePath: { eq: "heromain.png" }) {
+    img: file(relativePath: { eq: "about.png" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_tracedSVG
@@ -41,4 +42,4 @@ export const query = graphql`
     }
 }
 `
-export default IndexPage
+export default AboutPage
