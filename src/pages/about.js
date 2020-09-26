@@ -6,7 +6,7 @@ import { graphql } from 'gatsby'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import HeroSection from '../components/Reusable/HeroSection'
-import InfoBlock from '../components/Reusable/InfoBlock'
+import Infoblock from '../components/Reusable/Infoblock'
 import DualInfoBlock from '../components/Reusable/DualInfoBlock'
 import Teamphotosection from '../components/About/Teamphotosection'
 
@@ -23,7 +23,7 @@ const AboutPage = ({ data }) => (
       heroClass='about-background'>
     </HeroSection>
     <DualInfoBlock heading='A message from CEO' image='https://images.pexels.com/photos/3577561/pexels-photo-3577561.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'/>
-    <InfoBlock heading='Our Vision'/>
+    <Infoblock heading='Our Vision'/>
     <Teamphotosection></Teamphotosection>
 
   </Layout>

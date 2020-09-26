@@ -5,7 +5,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import HeroSection from "../components/Reusable/HeroSection"
-import InfoBlock from "../components/Reusable/InfoBlock"
+import Infoblock from "../components/Reusable/Infoblock"
 import DualInfoBlock from "../components/Reusable/DualInfoBlock"
 import CourseCart from "../components/Cart/CourseCart"
 
@@ -21,7 +21,7 @@ const IndexPage = ({ data }) => (
       heroClass="hero-background"
     ></HeroSection>
     <CourseCart courses={data.courses}></CourseCart>
-    <InfoBlock heading="About us" />
+    <Infoblock heading="About us" />
     <DualInfoBlock
       heading="Our Team"
       image="https://images.pexels.com/photos/3561340/pexels-photo-3561340.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
