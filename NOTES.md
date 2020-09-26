@@ -4,12 +4,12 @@ Gatsby - [Official docs](https://www.gatsbyjs.com/docs/quick-start/)
 
 ### What is Gatsby ??
 - It is a **static site generator** means it will produce for us static HTML files we load up on to a server
-Static site donot mean not interative or not dynamic.
+Static sites do not mean not interactive or not dynamic.
 We can load JS into the HTML files that  Gatsby serves as well as make API calls do interactions & build incredibly rich & immersive sites even 
-though they are static in their nature of just being HTML up without programming server -side language.
+though they are static in their nature of just being HTML up without programming server-side language.
 
-- It is going to use Node ,Node will be running in a developemnt environment but the final result dont require node to run on the server side
-- Uses GraphQL to get Data from anywhere for eg data from markdown files,csv files, databases.
+- It is going to use Node, Node will be running in a development environment but the final result doesn't require the node to run on the server-side
+- Uses GraphQL to get Data from anywhere for eg data from markdown files, CSV files, databases.
 **Note** - Gatsby is not going to handle data for us rather it will get data pulled into Gatsby & generate the site from that data
 - Uses React for Templating
 - Includes Plugin Architecture
@@ -17,7 +17,7 @@ though they are static in their nature of just being HTML up without programming
 
 ### Why use Gatsby ??
 - We use Gatsby for speed security & improve dev experience 
-- Gatsby has a solid team, open source coummity & great documenentation
+- Gatsby has a solid team, open-source community & great documentation
 
 ### Your first project in gatsby reactjs
 
@@ -25,7 +25,7 @@ though they are static in their nature of just being HTML up without programming
 
 `npm install -g gatsby-cli`
 
-To check if it is install run `gatsby --help` if no error then gatsby it 
+To check if it is installed run `gatsby --help` if no error then gatsby it 
 install to this path.
 
 2. Create a Gatsby site.
@@ -49,36 +49,39 @@ Install es7 extension - ES7 React/Redux/GraphQL/React-Native snippets by dsznajd
 
 ### Create Your First very Component in React
 
-**1. Compoenent** - It represnt part of the user interface. 
-It is reusable code that is same component can used for multiple times with different props.They can also be nested inside other components.
+**1. Component** - It represents a part of the user interface. 
+It is a reusable code that is the same component that can be used multiple times with different props. They can also be nested inside other components.
 eg - Footer,Header,Main Content,SideBar etc.
 
 Types:
 - **Functional Components** (Trending) - It is Javascript function which return UI
 - shortcut -  rfc
-- eg function welcome(props){
-    return <h1>>Hello ,{props.name}</h1>
-}
+- eg 
+`function welcome(props){
+    return <h1>>Hello ,{props.name}<h1>
+}`
 
 - Diagram
 
-properties(props) -> [Javascript function] ->HTML(JSX)
-[learn more](https://www.youtube.com/watch?v=Cla1WwguArA)
--  **Class Components** - It is stateful & are regular ES6 classes that extend the component class from the react library.
-They must contain the render method which in turns return HTML.
+    properties(props) -> [Javascript function] ->HTML(JSX)
+    [learn more](https://www.youtube.com/watch?v=Cla1WwguArA)
+-  **Class Components** - It is stateful & is regular ES6 classes that extend the component class from the react library.
+They must contain the render method which in turn returns HTML.
 - shortcut rcc
-- eg class Welcome extends React.Component{
+- eg `class Welcome extends React.Component{
 
     render(){
-    return (<h1>>Hello ,{props.name}</h1>)
+    return (
+      {props.name}
 
     }
-}
-learn state ,lifecycle ,methods & `this` binding after this learn hooks in class component.
+}`
+
+learn state, lifecycle, methods & `this` binding after this learn hooks in-class component.
 - Diagram
 
-properties(props) -> [ES6 ] ->HTML(JSX)
-[learn more](https://www.youtube.com/watch?v=lnV34uLEzis)
+    properties(props) -> [ES6 ] ->HTML(JSX)
+    [learn more](https://www.youtube.com/watch?v=lnV34uLEzis)
 ### Export & Import components
 
 1. Using default export - `exports default MyComponent`
@@ -88,17 +91,17 @@ in this MyComponent Name be anything
 2. Using Name export - `export const MyComponent` 
 then in another file `import {MyComponent} from 'component_path'`
 now you cannot change MyComponent Name & also use Curly bracket
-otherwise you will get error - Attempt import error 'component_path' doent contain a default export 
+otherwise, you will get an error - Attempt import error 'component_path' doesn't contain a default export 
 
 ### Functional vs Class Components 
-Funtionals - 
+Functionals - 
 1. Simple functions
 2. Use functional components as much as possible
 3. Mainly Responsible for UI
 
 
 Class Components  - 
-1. More Feature rich 
+1. More Feature-rich 
 2. Maintain their own private data -state
 3. Complex UI logic
 4. Provide lifecycle hooks
@@ -106,22 +109,22 @@ Class Components  -
 
 
 
-**2. Props** - It is like passing argument in a function or simply taking data here & there.It makes our app dynamic 
+**2. Props** - It is like passing argument in a function or simply taking data here & there. It makes our app dynamic 
 
-- use name attribute to pass the different parameter
+- use the name attribute to pass the different parameter
 
-exports const Greet =props=>{
+`exports const Greet =props=>{
 
-    return (<h1>>Hello ,{props.name}</h1>)
-}
-<Greet name="Passing first Para"/>
+    return ({props.name})
+}`
+<Greet name="Passing first Para">
 
 **Note-** 
-1. for class component we can directly access props without mentioning props as passing parameter & they are already reserved in class components.
-use `this` keyword to access propbs 
+1. for the class component we can directly access props without mentioning props as passing parameter & they are already reserved in-class components.
+use `this` keyword to access props 
 `this.props.name` 
 
-2. Props are immuatable i.e you cannot change props value.
+2. Props are immutable i.e you cannot change props value.
 - [learn more](https://www.youtube.com/watch?v=m7OWXtbiXX8)
 
 **3. State** - There is a container in a React so whenever you want to change something first access the container that is your state so basically changing the variable is thru container is states
@@ -129,7 +132,7 @@ use `this` keyword to access propbs
 ### Props vs State
 - Props -
 1. Props get passed to the component
-2. Functional Paramters
+2. Functional Parameters
 3. Props are immutable 
 4. props - Functional Components & this.props - Class Components
 
@@ -156,7 +159,7 @@ make a footer design with `<Footer>` tag
 
 ### Getting started with Navbar in React 
 
-**Link** - Link from gatsby is similar anchor tag in html but it provide us smooth pager changes rather than flashed occur as in anchor tag.
+**Link** - The link from gatsby is similar anchor tag in HTML but it provides us smooth pager changes rather than flashed occur as in the anchor tag.
 
 
 Syntax - <Link to="/location">blog<Link>
@@ -199,7 +202,7 @@ plus being able to style with Tailwind CSS and suchlike Frameworks
 
 ### Gatsby Source Contentful [link](https://www.gatsbyjs.com/plugins/gatsby-source-contentful/)
 
-This plugin is used for pulling content types, entries, and assets into Gatsby from Contentful spaces. It creates links between entry types and asset so they can be queried in Gatsby using GraphQL.
+This plugin is used for pulling content types, entries, and assets into Gatsby from Contentful spaces. It creates links between entry types and assets so they can be queried in Gatsby using GraphQL.
 
 ### Contentful [website](https://www.contentful.com/) 
 
@@ -209,6 +212,7 @@ Create an account
 
 ### Environment Variables [website](https://www.gatsbyjs.com/docs/environment-variables/)
 
+create .env.development file in the root directory & store Contentful private key their
 
 ### Adding Custom Environment Variables [website](https://create-react-app.dev/docs/adding-custom-environment-variables/)
 

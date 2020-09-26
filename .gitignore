@@ -1,4 +1,4 @@
-/Cart/*
+src/components/Cart/CourseCart.js
 .cache
 .prettierignore
 .prettierrc
