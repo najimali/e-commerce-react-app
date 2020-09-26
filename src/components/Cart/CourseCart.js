@@ -16,10 +16,13 @@ export default class CourseCart extends Component {
       <section className="py-5">
         <div className="container">
           <Heading title="Course" />
-          <div className="row" style={{margin:'1rem'}}>
+          <div className="row" style={{ margin: "1rem" }}>
             {this.state.mycourses.map(({ node }) => {
               return (
-                <div key={node.id} className="col-11 col-md-6 d-flex mx-auto">
+                <div
+                  key={node.id}
+                  className="col-11 col-md-6 d-flex my-3 mx-auto"
+                >
                   <Img fixed={node.image.fixed}></Img>
                   <div className="flex-grow-1 px-3">
                     <div className="d-flex justify-content-between">
@@ -29,7 +32,17 @@ export default class CourseCart extends Component {
                     <p className="text-muted">
                       <small>{node.description.description}</small>
                     </p>
-                    <button className="btn btn-warning">Join Now</button>
+                    <button
+                      className="btn btn-warning snipcart-add-item"
+                      data-item-id={node.id}
+                      data-item-price={node.price}
+                      data-item-description={node.description.description}
+                      data-item-image={node.image.fixed.src}
+                      data-item-name={node.title}
+                      data-item-url="https://web.learncodeonline.in/"
+                    >
+                      Join Now
+                    </button>
                   </div>
                 </div>
               )

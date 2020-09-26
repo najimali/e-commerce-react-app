@@ -20,8 +20,8 @@ const IndexPage = ({ data }) => (
       subtitle="LearnCodeOnline.in"
       heroClass="hero-background"
     ></HeroSection>
-    <InfoBlock heading="About us" />
     <CourseCart courses={data.courses}></CourseCart>
+    <InfoBlock heading="About us" />
     <DualInfoBlock
       heading="Our Team"
       image="https://images.pexels.com/photos/3561340/pexels-photo-3561340.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
