@@ -163,12 +163,54 @@ Syntax - <Link to="/location">blog<Link>
 
 [more](https://www.gatsbyjs.com/docs/gatsby-link/)
 
+install - `npm install gatsby-background-image`
+### Gatsby Background Image 
+[official docs](https://www.gatsbyjs.com/plugins/gatsby-background-image/)
+gatsby-background-image is a React component which for background-images provides, what Gatsby’s own gatsby-image does for the rest of your images and even more:
+
+It has all the advantages of gatsby-image, including the “blur-up” technique or a ”traced placeholder” SVG to show a preview of the image while it loads,
+plus being usable as a container (no more hacks with extra wrappers)
+plus being able to work with multiple stacked background images
+plus being able to style with Tailwind CSS and suchlike Frameworks
 
 
+**How to use** -
+1. `import BackgroundImage from 'gatsby-background-image'`
+2. GraphhQL queries to convert image to tracedSVG
+`{
+        'your_image_variable': file(relativePath: { eq: "image_name" }) {
+          childImageSharp {
+            fluid(quality: 90, maxWidth: 1920) {
+              ...GatsbyImageSharpFluid_tracedSVG
+            }
+          }
+        }
+`
+3. It will return `data` in data variable
+4. Set ImageData
+ `const imageData = data.your_image_variable.childImageSharp.fluid`
+5. use BackGround tag 
+<BackgroundImage
+          Tag="section"
+          className={className}
+          fluid={imageData}
+          backgroundColor={`#040e18`}
+        >
+
+### Gatsby Source Contentful [link](https://www.gatsbyjs.com/plugins/gatsby-source-contentful/)
+
+This plugin is used for pulling content types, entries, and assets into Gatsby from Contentful spaces. It creates links between entry types and asset so they can be queried in Gatsby using GraphQL.
+
+### Contentful [website](https://www.contentful.com/) 
+
+It’s the modern way to manage content: Control all content from a single hub. Publish to any channel. Integrate hundreds of tools with our industry-leading app framework.
+
+Create an account
+
+### Environment Variables [website](https://www.gatsbyjs.com/docs/environment-variables/)
 
 
-
-
+### Adding Custom Environment Variables [website](https://create-react-app.dev/docs/adding-custom-environment-variables/)
 
 
 

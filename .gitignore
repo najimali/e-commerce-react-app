@@ -1,10 +1,15 @@
+/Cart/*
 .cache
 .prettierignore
 .prettierrc
 gatsby-browser.js
-gatsby-config.js
+# gatsby-config.js
 gatsby-node.js
 gatsby-ssr.js
+
+# these files contains the contentful space id & access token 
+.env.development
+.env.development.local
 
 # Logs
 logs

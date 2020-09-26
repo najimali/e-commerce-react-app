@@ -8,7 +8,7 @@ import SEO from "../components/seo"
 import HeroSection from '../components/Reusable/HeroSection'
 import InfoBlock from '../components/Reusable/Infoblock'
 import DualInfoBlock from '../components/Reusable/DualInfoblock'
-
+import CourseCart from '../components/Cart/CourseCart'
 
 //data is return from graphql queries
 const IndexPage = ({ data }) => (
@@ -24,12 +24,14 @@ const IndexPage = ({ data }) => (
     </HeroSection>
     <InfoBlock heading='About us'/>
     <DualInfoBlock heading='Our Team' image='https://images.pexels.com/photos/3561340/pexels-photo-3561340.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'/>
-
   </Layout>
 )
-
+// query one is for images 
 // Converting the heromain.png image to SVG & returning in form of data 
 //note img is reference is store in img
+
+//Query two from contentful resources the model we created on app.contentful.com 
+//edge will be data in array form
 export const query = graphql`
 { 
     img: file(relativePath: { eq: "heromain.png" }) {
@@ -39,6 +41,22 @@ export const query = graphql`
         }
       }
     }
+    courses:allContentfulCourses {
+      edges{
+        node{
+          title
+          image{
+          fixed(width:200,height:120){
+            ...GatsbyContentfulFixed_tracedSVG
+            }
+          }
+          
+        }
+      }
+    }
 }
 `
+
+
+
 export default IndexPage

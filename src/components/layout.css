@@ -1,10 +1,11 @@
 /* located in Navbar.js */
-*{
 
-  margin:0;
+* {
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 .bg-theme {
   background-color: #0E6BA8;
 }

@@ -2,7 +2,7 @@ import React from "react"
 import Heading from "./Heading"
 import { Link } from "gatsby"
 
-export default function DualInfoBlock({ heading ,image}) {
+export default function DualInfoBlock({ heading, image }) {
   return (
     <section className="my-4 py-4 bg-theme">
       <div className="container">
@@ -34,23 +34,17 @@ export default function DualInfoBlock({ heading ,image}) {
             </p>
           </div>
           <div className="col-4">
-            <div class="card bg-dark">
-              <img
-                class="card-img-top"
-                src={image}
-                alt="image goes here"
-              />
-              <div class="card-body">
-                <h5 class="card-title text-white">Just Click Photos</h5>
-                <p class="card-text text-white">
+            <div className="card bg-dark">
+              <img className="card-img-top" src={image} alt="image goes here" />
+              <div className="card-body">
+                <h5 className="card-title text-white">Just Click Photos</h5>
+                <p className="card-text text-white">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel
                   quo tenetur aspernatur minima provident repellat numquam,
                   assumenda, eius aperiam ipsam, maiores autem reprehenderit sed
                   obcaecati molestiae nobis iste voluptates facere.
                 </p>
-
-                {/* <a href="#" >Go somewhere</a> */}
-                <Link class="btn btn-warning btn-block">{heading}</Link>
+                <Link to ='/about'className="btn btn-warning btn-block">{heading}</Link>
               </div>
             </div>
           </div>
