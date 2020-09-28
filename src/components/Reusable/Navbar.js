@@ -24,7 +24,8 @@ export default class Navbar extends Component {
             {
                 id: 3,
                 item: 'Services',
-                url: '/services'
+                // it is should be same us page name.
+                url: '/service'
             },
             {
                 id: 4,

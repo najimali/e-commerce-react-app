@@ -218,6 +218,12 @@ create .env.development file in the root directory & store Contentful private ke
 
 
 
+### Hosting on Netify 
+
+### Add Web Hooks 
+
+
+
 
 
 
